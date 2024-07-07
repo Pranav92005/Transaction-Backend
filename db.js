@@ -1,5 +1,8 @@
+
 const mongoose=require('mongoose');
-mongoose.connect("");
+const MONGODB_CONNECT_URI=process.env.MONGODB_CONNECT_URI;
+mongoose.connect( MONGODB_CONNECT_URI);
+
 const userschema=new mongoose.Schema({
     username:{
         type:String,
